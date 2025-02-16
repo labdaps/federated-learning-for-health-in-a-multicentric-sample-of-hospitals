@@ -1,9 +1,37 @@
 # Federated Learning for Health Outcomes Predictions in a Multicentric Sample of Hospitals
 
-## ABSTRACT
+## Abstract
 
-We evaluated the predictive capacity of machine learning models using federated learning (FL) for COVID-19 mortality in hospitalized patients. To use the federated learning approach, we analyzed a multicentric sample of 21 Brazilian hospitals, which included 17,022 patients. A total of 22 predictors were used for the predictive models, including age, sex, heart rate, respiratory rate, pressure, temperature, and blood count data. We evaluated two scenarios based on a horizontal structure of federated learning. In the first, we evaluated the predictive performance of two models, a deep Multi Layer Perceptron (MLP) neural network and a Logistic Regression (LR), whose coefficients were aggregated by Federated Averaging. In the second scenario, we proposed and developed a federated learning approach inspired by the Random Forest algorithm. In both scenarios, the federated learning models were compared to the predictive performance of local training data from each hospital, using the same hyperparameter space. On average, the AUC-ROC of the first scenario was 0.8117 for LR, with an average gain of 7.21% by using FL, and 0.7962 for MLP, with an average gain of 12.79% by using FL. The decision tree-based model in the federated context obtained an AUC-ROC of 0.8022, with an average gain of 6.48% by using FL. Gains in predictive performance of the FL models were observed for most hospitals compared to training with only local data. A larger predictive gain for federated learning was observed in hospitals with a smaller amount of patient data.
+We evaluated the performance of federated learning (FL) strategies in predicting
+COVID-19 mortality among hospitalized patients, in a multicenter longitudinal sample
+of 21 Brazilian hospitals that included 17,022 patients and 22 predictors. We tested two
+scenarios based on a horizontal structure of FL. In the first scenario, we analyzed two
+standard models, a deep Multi-Layer Perceptron neural network (MLP), and a Logistic
+Regression (LR). In the second scenario, we developed a federated learning approach
+inspired by the Random Forest algorithm. We then compared the predictive
+performance of the FL models to that of local training data from each hospital. The
+results indicated that the FL models had a higher average AUC-ROC, resulting in a
+better predictive performance than models trained using only local data. The average
+gain for the FL models was 7.21% for LR, 12.79% for MLP, and 6.48% for the Random
+Forest approach. The study also observed that the FL models had a more significant
+predictive gain in hospitals with a smaller number of patient data.
+
+## Author summary
+The authors, coming from diverse fields of expertise, present a comprehensive analysis of
+federated learning—a decentralized machine learning approach where multiple
+institutions collaboratively train a model while keeping data localized to ensure privacy
+and security. This study evaluates the effectiveness of federated learning architectures
+that aggregate model parameters through averaging in predicting COVID-19 mortality.
+By applying this methodology across 21 hospitals throughout Brazil, the study
+investigates its utility across various patient volume contexts and assesses its predictive
+performance. Additionally, the authors explore federated models based on decision trees
+and propose the development of a self-scalable random forest algorithm to enhance
+predictive capabilities and adaptability. The findings suggest that federated learning
+holds promise as a powerful solution for predictive challenges in healthcare settings,
+fostering both innovation and data security.
 
 ## CONCLUSION
 
-The use of federated learning methodology presented significant gains compared to local learning in all models tested in both learning contexts explored here. Despite the heterogeneous distribution of data across Brazilian regions, federated learning was able to learn and contribute to the predictive gain of COVID mortality in virtually all ranges of available data for the training process. In this regard, as shown in Figure 3, the greatest gains when incorporating federated learning occurred in hospitals with a smaller number of patients, which consequently have fewer pieces of information to predict mortality. It should be noted that the decision tree-based federated learning model proposed by us achieved an average AUC-ROC of 0.8022 with lower variability in this metric among the evaluated hospitals (Coefficient of Variation: 7.30%). The LR model achieved an average AUC-ROC of 0.8117, representing the highest metric in the federated context. Therefore, federated learning proved to be a relevant tool to increase the predictive capacity of COVID-19 mortality for hospitalized patients, in a context of privacy and heterogeneity of hospital data.
+The use of federated learning methodology demonstrated significant improvements over local learning across all tested models. Despite the heterogeneous distribution of data across Brazilian regions, federated learning effectively captured patterns and contributed to predictive gains in COVID-19 mortality throughout most of the training process. The most notable improvements were observed in hospitals with smaller patient populations.
+
+The decision tree-based federated learning model proposed in our study achieved an average AUC-ROC of 0.8022, with low variability among the evaluated hospitals (Coefficient of Variation: 7.30%). Overall, the federated learning approach enhanced the performance of algorithms in predicting COVID-19 mortality for hospitalized patients, particularly in a country marked by significant healthcare inequalities.
