@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     lista_auc = []
 
-    # Split train set into 10 partitions and randomly use one for training.
+    # Split train set into 5 partitions and randomly use one for training.
     partition_id = np.random.choice(5)
     (X_train, y_train) = utils.partition(X_train, y_train, 5)[partition_id]
 
